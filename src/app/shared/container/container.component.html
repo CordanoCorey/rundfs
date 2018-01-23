@@ -1,0 +1,27 @@
+<dfs-header></dfs-header>
+
+<mat-sidenav-container>
+
+  <!-- sidenav -->
+  <mat-sidenav [opened]="sidenavOpened" position="end" mode="side" #sidenav class="scrollable">
+    <dfs-sidebar>
+      <ng-content select=".sidebar-content"></ng-content>
+    </dfs-sidebar>
+  </mat-sidenav>
+  <!-- end sidenav -->
+
+  <!-- primary content -->
+  <div id="content">
+    <div class="content scrollable" [style.height.px]="contentHeight$ | async" #scroller>
+      <dfs-navbar></dfs-navbar>
+      <div class="message message-top" [class.success-message]="inSuccessState" [class.error-message]="inErrorState" *ngIf="showMessage"></div>
+      <ng-content select=".container-content"></ng-content>
+      <dfs-footer>
+        <ng-content select=".footer-content"></ng-content>
+      </dfs-footer>
+    </div>
+    <div class="message message-bottom" [class.success-message]="inSuccessState" [class.error-message]="inErrorState" *ngIf="showMessage"></div>
+  </div>
+  <!-- end primary content -->
+
+</mat-sidenav-container>

@@ -1,0 +1,33 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es5",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2017",
+      "dom"
+    ]
+  },
+  "include": [
+    "node_modules/@caiu/common/index.ts",
+    "node_modules/@caiu/core/index.ts",
+    "node_modules/@caiu/effects/index.ts",
+    "node_modules/@caiu/errors/index.ts",
+    "node_modules/@caiu/events/index.ts",
+    "node_modules/@caiu/forms/index.ts",
+    "node_modules/@caiu/http/index.ts",
+    "node_modules/@caiu/router/index.ts",
+    "node_modules/@caiu/storage/index.ts",
+    "node_modules/@caiu/store/index.ts",
+    "src/main.ts",
+    "src/polyfills.ts"
+  ]
+}
